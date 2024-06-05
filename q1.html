@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+</head>
+<body>
+    <style>
+        .forms {
+            margin: 0 auto;
+            padding: auto;
+            max-width: 400px;
+            
+            
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 3%;
+        }
+
+        input {
+            width: 50%;
+            border: 1px solid rgb(51, 48, 45);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background-color: #007bff;
+            border: 1px solid black;
+            color: white
+        }
+
+        thead th, td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid black;
+        }
+
+        button {
+            margin-top: 10px;
+            width: 10%;
+            height: 2em;
+        }
+    </style>
+<h2>Formulário com tabela dinâmica</h2>
+<div class="forms"></div>
+    <form id="form">
+        <label for="Nome">Nome</label>
+        <input type="text" name="" id="nome" required>
+        <label for="">Email</label>
+        <input type="text" name="" id="email" required>
+        <label for="">Telefone</label>
+        <input type="text" name="" id="telefone" required>
+        <label for="">Endereco</label>
+        <input type="text" name="" id="endereco" required>
+        <label for="">Cidade</label>
+        <input type="text" name="" id="cidade" required>
+        <label for="">Estado</label>
+        <input type="text" name="" id="estado" required>
+        <label for="">País</label>
+        <input type="text" name="" id="pais" required>
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <table id="tabela">
+        <thead>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Telefone</th>
+            <th>Endereço</th>
+            <th>Cidade</th>
+            <th>Estado</th>
+            <th>País</th>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+
+    <script>
+        // inserir na tabela
+        document.getElementById("form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let nome = document.getElementById("nome").value;
+            let email = document.getElementById("email").value;
+            let telefone = document.getElementById("telefone").value;
+            let endereco = document.getElementById("endereco").value;
+            let cidade = document.getElementById("cidade").value;
+            let estado = document.getElementById("estado").value;
+            let pais = document.getElementById("pais").value;
+        
+            let tabela = document.getElementById("tabela").getElementsByTagName('tbody')[0];
+            let novaLinhna = tabela.insertRow(-1);
+            
+            var cell1 = novaLinhna.insertCell(0);
+            var cell2 = novaLinhna.insertCell(1);
+            var cell3 = novaLinhna.insertCell(2);
+            var cell4 = novaLinhna.insertCell(3);
+            var cell5 = novaLinhna.insertCell(4);
+            var cell6 = novaLinhna.insertCell(5);
+            var cell7 = novaLinhna.insertCell(6);
+
+            cell1.innerHTML = nome;
+            cell2.innerHTML = email;
+            cell3.innerHTML = telefone;
+            cell4.innerHTML = endereco;
+            cell5.innerHTML = cidade;
+            cell6.innerHTML = estado;
+            cell7.innerHTML = pais;
+
+            document.getElementById("form").reset();
+        })
+    </script>
+    
+</body>
+</html>
+

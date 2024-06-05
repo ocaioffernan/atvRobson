@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-3</title>
+</head>
+<body>
+
+    <style>
+        span{
+            opacity: 0;
+            background-color: rgb(238, 255, 0);
+            padding: 6px;
+            border-radius: 5px;
+        }
+    </style>
+    <form id="form">
+        <input type="text" id="nome" placeholder="Insira seu nome">
+        <input type="email" id="email" placeholder="Insira seu melhor e-mail">
+        <input type="password" id="senha" placeholder="Insira uma senha">
+        <input type="password" id="confirma-senha" placeholder="Confirme sua senha">
+        <input type="submit" value="Enviar">
+        <span id="texto"></span>
+    </form>
+
+    <script>
+        document.getElementById("form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let nome = document.getElementById("nome").value;
+            let email = document.getElementById("email").value;
+            let senha = document.getElementById("senha").value;
+            let confirmaSenha= document.getElementById("confirma-senha").value;
+
+            if (nome === "" || email === "" || senha === "" || confirmaSenha === ""){
+                document.getElementById("texto").style.opacity = 100;
+                document.getElementById("texto").innerHTML = "Preencha todos os campos";
+                return;
+            } else if (senha != confirmaSenha){
+                document.getElementById("texto").style.opacity = 100;
+                document.getElementById("texto").innerHTML ="As senhas devem ser iguais";
+                return;
+            }else if (senha.length < 6){
+                document.getElementById("texto").style.opacity = 100;
+                document.getElementById("texto").innerHTML ="A senha deve ter pelo menos 6 dígitos";
+                return;
+            } else {
+                document.getElementById("texto").style.opacity = 100;
+                document.getElementById("texto").innerHTML ="Formulario enviado com sucesso";
+                document.getElementById("form").reset();
+
+            }
+    })
+    </script>
+</body>
+</html>
