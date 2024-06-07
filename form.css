@@ -1,0 +1,42 @@
+        body {
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        span{
+            opacity: 0;
+            background-color: yellow;
+            padding: 6px;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+
+        
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input {
+            width: 40%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            border: 1px solid rgb(81, 85, 84);
+            padding: 7px;
+            width: 10%;
+            border-radius: 5%;
+        }
+
+        button:hover {
+            background-color: rgb(50, 56, 55);
+            border: 1px solid black;
+        }

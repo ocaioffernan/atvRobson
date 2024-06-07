@@ -5,25 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q-3</title>
+    <link rel="stylesheet" href="form.css">
 </head>
 <body>
 
-    <style>
-        span{
-            opacity: 0;
-            background-color: rgb(238, 255, 0);
-            padding: 6px;
-            border-radius: 5px;
-        }
-    </style>
+<section>
+    <h2>Formulário</h2>
     <form id="form">
         <input type="text" id="nome" placeholder="Insira seu nome">
         <input type="email" id="email" placeholder="Insira seu melhor e-mail">
         <input type="password" id="senha" placeholder="Insira uma senha">
         <input type="password" id="confirma-senha" placeholder="Confirme sua senha">
-        <input type="submit" value="Enviar">
+        <button type="submit">Enviar</button>
         <span id="texto"></span>
     </form>
+</section>
 
     <script>
         document.getElementById("form").addEventListener("submit", function(event) {
