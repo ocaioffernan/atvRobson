@@ -31,22 +31,17 @@
             let confirmaSenha= document.getElementById("confirma-senha").value;
 
             if (nome === "" || email === "" || senha === "" || confirmaSenha === ""){
-                document.getElementById("texto").style.opacity = 100;
                 document.getElementById("texto").innerHTML = "Preencha todos os campos";
                 return;
             } else if (senha != confirmaSenha){
-                document.getElementById("texto").style.opacity = 100;
                 document.getElementById("texto").innerHTML ="As senhas devem ser iguais";
                 return;
             }else if (senha.length < 6){
-                document.getElementById("texto").style.opacity = 100;
                 document.getElementById("texto").innerHTML ="A senha deve ter pelo menos 6 dígitos";
                 return;
             } else {
-                document.getElementById("texto").style.opacity = 100;
                 document.getElementById("texto").innerHTML ="Formulario enviado com sucesso";
                 document.getElementById("form").reset();
-
             }
     })
     </script>

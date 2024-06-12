@@ -20,9 +20,8 @@
     
         function Click() {
             let contador = document.getElementById("contador")
-            const cordeFundo = gerarCor()
             contador.innerHTML = parseInt(contador.innerHTML) + 1
-            document.body.style.backgroundColor = cordeFundo; 
+            document.body.style.backgroundColor = gerarCor(); 
         }
         
     </script>

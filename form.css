@@ -6,8 +6,7 @@
         }
 
         span{
-            opacity: 0;
-            background-color: yellow;
+            /* opacity: 0; */
             padding: 6px;
             margin-top: 5px;
             border-radius: 5px;
